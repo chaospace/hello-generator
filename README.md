@@ -163,3 +163,9 @@ const question = generator.next().value;
 console.log(question);
 generator.throw(new Error("에러 발생!"));
 ```
+
+## 응용 
+ - yield를 이용해 값을 내려줄지 yield를 이용해 값을 당겨 올지를 정하고 일관된 방식으로 사용하는게 코드 일관성에 좋음.
+ - 형식이 어떻게 되든 중첩 함수를 통해 데이터 가공을 하고 원하는 결과를 얻을 수 있음.
+ - 내려받는 형식은 이를 사용하는 곳에서 원하는 행동을 결정할 수 있다는 장점이 있음.
+ - 당겨오는 형식은 값에 유효성을 체크하기 위해 while과 try, finally를 통해 마지막을 체크하는 처리가 필요.
